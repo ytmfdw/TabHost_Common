@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_layout" />
+
+    <FrameLayout
+        android:id="@+id/layout_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <qq.qianfeng.com.qq.widget.EmptyRecyclerView
+            android:id="@+id/erv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <qq.qianfeng.com.qq.widget.EmptyView
+            android:id="@+id/emptyView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center" />
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/btn_ask"
+        style="@style/btn_common_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="申请" />
+
+</LinearLayout>

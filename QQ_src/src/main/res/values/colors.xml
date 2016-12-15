@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="devide_line">#CBCED2</color>
+    <color name="colorPrimary">#FF12b6f6</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="text_title">#FFFFFFFF</color>
+
+    <color name="black_text">#FF333333</color>
+    <color name="rb_content_selected">#FFFFFFFF</color>
+    <color name="rb_content_normal">#00000000</color>
+    <color name="black_bg">#80000000</color>
+    <color name="white_bg">#80FFFFFF</color>
+    <color name="str_recode">#FFFF0000</color>
+    <color name="tab_text_nomal">#FF7f8393</color>
+    <color name="tab_text_selected">#FF12b6f6</color>
+</resources>
