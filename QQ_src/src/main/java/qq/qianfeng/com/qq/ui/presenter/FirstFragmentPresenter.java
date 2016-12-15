@@ -1,8 +1,8 @@
-package qq.qianfeng.com.qq.presenter;
+package qq.qianfeng.com.qq.ui.presenter;
 
-import qq.qianfeng.com.qq.model.FirstFragmentModel;
-import qq.qianfeng.com.qq.model.IFirstFragmentModel;
-import qq.qianfeng.com.qq.view.IFirstFragmentView;
+import qq.qianfeng.com.qq.ui.model.FirstFragmentModel;
+import qq.qianfeng.com.qq.ui.model.IFirstFragmentModel;
+import qq.qianfeng.com.qq.ui.view.IFirstFragmentView;
 
 /**
  * Created by Administrator on 2016/12/1.

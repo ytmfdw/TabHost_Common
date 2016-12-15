@@ -109,8 +109,8 @@ public class MainActivity extends BaseNetActivity implements TabHost.OnTabChange
         //创建TabView
         ImageView iv = (ImageView) view.findViewById(R.id.iv_tabimg);
         iv.setImageResource(imgs[i]);
-        TextView tv = (TextView) view.findViewById(R.id.tv_tabtext);
-        tv.setText(titles[i]);
+//        TextView tv = (TextView) view.findViewById(R.id.tv_tabtext);
+//        tv.setText(titles[i]);
         return view;
     }
 

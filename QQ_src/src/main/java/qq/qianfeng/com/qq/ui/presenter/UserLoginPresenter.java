@@ -1,12 +1,11 @@
-package qq.qianfeng.com.qq.presenter;
+package qq.qianfeng.com.qq.ui.presenter;
 
 import android.content.Context;
 
 import qq.qianfeng.com.qq.entity.UserBean;
-import qq.qianfeng.com.qq.impl.OnLoginListener;
-import qq.qianfeng.com.qq.model.IUserLoginModel;
-import qq.qianfeng.com.qq.model.UserLoginModel;
-import qq.qianfeng.com.qq.view.IUserLoginView;
+import qq.qianfeng.com.qq.ui.model.IUserLoginModel;
+import qq.qianfeng.com.qq.ui.model.UserLoginModel;
+import qq.qianfeng.com.qq.ui.view.IUserLoginView;
 
 /**
  * Created by Administrator on 2016/11/30.

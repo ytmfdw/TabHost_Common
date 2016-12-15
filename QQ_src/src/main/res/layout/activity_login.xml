@@ -10,7 +10,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="80dp"
         android:contentDescription="@string/app_name"
-        android:src="@mipmap/ic_launcher" />
+        android:src="@drawable/qq_head" />
 
     <RelativeLayout
         android:id="@+id/rl_user"

@@ -1,4 +1,4 @@
-package qq.qianfeng.com.qq.model;
+package qq.qianfeng.com.qq.ui.model;
 
 /**
  * Created by Administrator on 2016/12/1.

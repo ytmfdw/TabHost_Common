@@ -5,18 +5,15 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
-import android.widget.Toast;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import qq.qianfeng.com.qq.QQApp;
 import qq.qianfeng.com.qq.R;
 import qq.qianfeng.com.qq.entity.UserBean;
-import qq.qianfeng.com.qq.impl.OnLoginListener;
-import qq.qianfeng.com.qq.presenter.UserLoginPresenter;
+import qq.qianfeng.com.qq.ui.presenter.UserLoginPresenter;
 import qq.qianfeng.com.qq.utils.SharedUtils;
-import qq.qianfeng.com.qq.view.IUserLoginView;
+import qq.qianfeng.com.qq.ui.view.IUserLoginView;
 
 /**
  * 登录界面

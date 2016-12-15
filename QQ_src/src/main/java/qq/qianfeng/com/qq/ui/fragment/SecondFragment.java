@@ -8,9 +8,9 @@ import android.view.ViewGroup;
 
 import butterknife.ButterKnife;
 import qq.qianfeng.com.qq.R;
-import qq.qianfeng.com.qq.presenter.SecondFragmentPresenter;
+import qq.qianfeng.com.qq.ui.presenter.SecondFragmentPresenter;
 import qq.qianfeng.com.qq.ui.activity.BaseNetActivity;
-import qq.qianfeng.com.qq.view.ISecondFragmentView;
+import qq.qianfeng.com.qq.ui.view.ISecondFragmentView;
 
 /**
  * Created by Administrator on 2016/11/30 0030.
