@@ -6,6 +6,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.FragmentTabHost;
 import android.support.v4.view.ViewPager;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.widget.Toolbar;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
@@ -19,10 +20,11 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import qq.qianfeng.com.qq.Config;
 import qq.qianfeng.com.qq.R;
-import qq.qianfeng.com.qq.ui.fragment.SecondFragment;
 import qq.qianfeng.com.qq.ui.fragment.BaseNetFragment;
-import qq.qianfeng.com.qq.ui.fragment.ThirdFragment;
 import qq.qianfeng.com.qq.ui.fragment.FirstFragment;
+import qq.qianfeng.com.qq.ui.fragment.SecondFragment;
+import qq.qianfeng.com.qq.ui.fragment.ThirdFragment;
+import qq.qianfeng.com.qq.utils.DisplayUtils;
 
 public class MainActivity extends BaseNetActivity implements TabHost.OnTabChangeListener, ViewPager.OnPageChangeListener {
 
@@ -45,6 +47,8 @@ public class MainActivity extends BaseNetActivity implements TabHost.OnTabChange
     Toolbar toolbar;
 
     int[] imgs = Config.MAIN_NAVIGATION_IMG;
+    @BindView(R.id.drawerlayout)
+    DrawerLayout drawerlayout;
 
 
     @Override
@@ -57,8 +61,10 @@ public class MainActivity extends BaseNetActivity implements TabHost.OnTabChange
     @Override
     public void initViews() {
         super.initViews();
+//        DisplayUtils.setDrawerLeftEdgeSize(this, drawerlayout, 0.5f);
         initViewPager();
         setupTabHost();
+
     }
 
     @Override
@@ -109,8 +115,7 @@ public class MainActivity extends BaseNetActivity implements TabHost.OnTabChange
         //创建TabView
         ImageView iv = (ImageView) view.findViewById(R.id.iv_tabimg);
         iv.setImageResource(imgs[i]);
-//        TextView tv = (TextView) view.findViewById(R.id.tv_tabtext);
-//        tv.setText(titles[i]);
+
         return view;
     }
 
@@ -160,4 +165,6 @@ public class MainActivity extends BaseNetActivity implements TabHost.OnTabChange
         }
         return super.onKeyDown(keyCode, event);
     }
+
+
 }

@@ -2,11 +2,15 @@ package qq.qianfeng.com.qq.utils;
 
 import android.app.Activity;
 import android.content.Context;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v4.widget.ViewDragHelper;
 import android.util.DisplayMetrics;
 import android.view.Display;
 import android.view.Window;
 import android.view.WindowManager;
 
+import java.io.File;
+import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
 /**
@@ -91,5 +95,38 @@ public class DisplayUtils {
         DisplayMetrics outMetrics = new DisplayMetrics();
         wm.getDefaultDisplay().getMetrics(outMetrics);
         return outMetrics.heightPixels;
+    }
+
+    /**
+     * 设置侧滑菜单的响应区域
+     * <p/>
+     * 没作用，只是修改了滑动触发区域
+     *
+     * @param activity
+     * @param drawerLayout
+     * @param displayWidthPercentage
+     */
+    public static void setDrawerLeftEdgeSize(Activity activity, DrawerLayout drawerLayout, float displayWidthPercentage) {
+        if (activity == null || drawerLayout == null) return;
+        try {
+            DisplayMetrics dm = new DisplayMetrics();
+            activity.getWindowManager().getDefaultDisplay().getMetrics(dm);
+            Field leftDraggerField = drawerLayout.getClass().getDeclaredField("mLeftDragger");
+            leftDraggerField.setAccessible(true);
+            ViewDragHelper leftDragger = (ViewDragHelper) leftDraggerField.get(drawerLayout);
+            Field edgeSizeField = leftDragger.getClass().getDeclaredField("mEdgeSize");
+            edgeSizeField.setAccessible(true);
+            int edgeSize = edgeSizeField.getInt(leftDragger);
+            edgeSizeField.setInt(leftDragger, Math.max(edgeSize, (int) (dm.widthPixels * displayWidthPercentage)));
+            //反射设置mMinDrawerMargin值
+//            Field mMinDrawerMargin = drawerLayout.getClass().getDeclaredField("mMinDrawerMargin");
+//            mMinDrawerMargin.setAccessible(true);
+//            mMinDrawerMargin.set(drawerLayout, (1 - displayWidthPercentage) * dm.widthPixels);
+//
+//            drawerLayout.invalidate();
+
+
+        } catch (Exception e) {
+        }
     }
 }
