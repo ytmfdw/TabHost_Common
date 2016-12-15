@@ -12,7 +12,7 @@ public class Config {
     /**
      * 主界面导航图标
      */
-    public static final int[] MAIN_NAVIGATION_IMG = {R.drawable.tab_item_third, R.drawable.tab_item_first, R.drawable.tab_item_second};
+    public static final int[] MAIN_NAVIGATION_IMG = {R.drawable.tab_item_first, R.drawable.tab_item_second, R.drawable.tab_item_third};
 
     /**
      * 主机地址
